@@ -40,6 +40,7 @@ class Main {
         System.out.println("\n");
 
         System.out.println("Diga o nome do professor responsável:");
+        try{
         String takeProfname = s.nextLine();
         
           String[] takeProfnomes = takeProfname.split(" ",3);
@@ -57,6 +58,9 @@ class Main {
         System.out.println("Nota AV2:"+(takeav2));
         System.out.println("ID:" +(Aluno.registrados));
         System.out.println("\n");
+        }catch(ArrayIndexOutOfBoundsException c){
+         throw new ArrayIndexOutOfBoundsException("Insira 3 nomes para a perfeita execução do programa");
+       }    
         
         
       }else{
